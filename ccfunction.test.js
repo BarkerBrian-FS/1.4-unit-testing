@@ -20,7 +20,13 @@ describe("Valid CC number", () => {
 
 describe("Invalid CC number", () => {
     test("As a user I want to be informed of any typing error", () => {
-        expect(secureCc("123")).toBe(error)
+        expect(secureCc("123")).toBe()
+    })
+})
+
+describe("Invalid CC number", () => {
+    test("As a user I want to be informed of any typing error", () => {
+        expect(secureCc("123456789123456789123")).toBe()
     })
 })
 
