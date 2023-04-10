@@ -1,7 +1,7 @@
 
-function obscureCard(card) {
+const secureCc = (card) => {
+    let secureCc = [];
     if (card.length >= 12 & card.length <= 16){
-        let secureCc = [];
         for(let i = 0; i < card.length; i++){
         if(i < card.length-4){
             secureCc.push("*");
@@ -12,6 +12,8 @@ function obscureCard(card) {
         return secureCc.join("");
     }
     else{
-        console.log= "invalid input plese try again"
+        console.log= "invalid input please try again"
     }
-  }
+  };
+
+  module.exports = secureCc;
